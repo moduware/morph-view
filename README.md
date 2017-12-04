@@ -1,17 +1,19 @@
-# \<morph-view\>
+## &lt;morph-view&gt;
 
-Polymorph Components View element where we put all our elements
+Polymorph View element where we put all of our elements.
 
-## Install the Polymer-CLI
 
-First, make sure you have the [Polymer CLI](https://www.npmjs.com/package/polymer-cli) installed. Then run `polymer serve` to serve your element locally.
+## Getting Started:
+For the information about how to clone the desired repository, running the local server and testing, please refer to this [link](https://github.com/moduware/polymorph-components/blob/master/INFO.md).
 
-## Using Your Element
 
-\<morph-view\> component is a container element where we will be putting all our elements. 
+
+## Demo
+- Here is a quick demo of the morph-view element.
+
 
 ```html
-<morph-view id="mainView" platform="ios"> 
+<morph-view id="mainView" platform="ios">
   <h3>Android morph-sidebar demo</h3>
 
   <button id="sidebarLeftToggler">Toggle Left Sidebar</button>
@@ -23,22 +25,17 @@ First, make sure you have the [Polymer CLI](https://www.npmjs.com/package/polyme
 </morph-sidebar>
 ```
 
-It also contains the `reveal` porperty to help implement the reveal animation variation when combined with our \<morph-sidebar\> component.
+## Attributes
 
-```hmtl
+| Custom Attribute |   Type  | Description                                                                                                                      | Default     |
+|:----------------:|:-------:|----------------------------------------------------------------------------------------------------------------------------------|-------------|
+|  **`reveal`**  | String  | Takes the value of left or right | **`null`** |
 
-static get properties() {
-  return {
-    reveal: {
-      type: String, // reveal can take a value of left or right
-      reflectToAttribute: true
-    }
-  };
-}
 
-```
 
-## ToDo
+## Styling
 
-- We need to add test for very basic functionality
-- Come up with a good way to demo this component so devs can easily understand why this component exist and how to use them
+
+Custom property                  | Description                            | Default
+---------------------------------|----------------------------------------|--------------------
+`--reveal-width`                 | Width of the reveal                    | 260px

@@ -1,9 +1,10 @@
-## &lt;morph-view&gt;
+# morph-view
 
 Polymorph View element where we put all of our elements.
 
 
-## Getting Started:
+## Getting Started
+
 For the information about how to clone the desired repository, running the local server and testing, please refer to this [link](https://github.com/moduware/polymorph-components/blob/master/INFO.md).
 
 

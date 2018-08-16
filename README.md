@@ -43,3 +43,9 @@ For the information about how to clone the desired repository, running the local
 Custom property                  | Description                            | Default
 ---------------------------------|----------------------------------------|--------------------
 `--reveal-width`                 | Width of the reveal                    | 260px
+
+## Further help
+
+For more information on how to install and run test please go here - [Polymorph elements getting started]
+
+[Polymorph elements getting started]: https://github.com/moduware/polymorph-components/blob/master/INFO.md

@@ -5,7 +5,7 @@
   "license": "Apache-2.0",
   "dependencies": {
     "polymer": "Polymer/polymer#^2.0.0",
-    "morph-element": "https://github.com/nexpaq/morph-element.git#master"
+    "morph-element": "https://github.com/nexpaq/morph-element.git#polymer3"
   },
   "devDependencies": {
     "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^2.0.0",

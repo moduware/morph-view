@@ -1,8 +1,17 @@
-<link rel="import" href="../polymer/polymer-element.html">
-<link rel="import" href="../morph-element/morph-element.html">
-
-<dom-module id="morph-view">
-  <template>
+import '@polymer/morph-element/morph-element.js';
+import { PolymerElement } from '@polymer/polymer/polymer-element.js';
+import { html } from '@polymer/polymer/lib/utils/html-tag.js';
+/**
+ * `morph-view`
+ * View where we put all our elements
+ *
+ * @customElement
+ * @polymer
+ * @demo demo/index.html
+ */
+class MorphView extends MorphElement(PolymerElement) {
+  static get template() {
+    return html`
     <style>
 
 
@@ -52,30 +61,18 @@
     </style>
 
     <slot></slot>
-    
-  </template>
+`;
+  }
 
-  <script>
-    /**
-     * `morph-view`
-     * View where we put all our elements
-     *
-     * @customElement
-     * @polymer
-     * @demo demo/index.html
-     */
-    class MorphView extends MorphElement(Polymer.Element) {
-      static get is() { return 'morph-view'; }
-      static get properties() {
-        return {
-          reveal: {
-            type: String, // reveal can take a value of left or right
-            reflectToAttribute: true
-          }
-        };
+  static get is() { return 'morph-view'; }
+  static get properties() {
+    return {
+      reveal: {
+        type: String, // reveal can take a value of left or right
+        reflectToAttribute: true
       }
-    }
+    };
+  }
+}
 
-    window.customElements.define(MorphView.is, MorphView);
-  </script>
-</dom-module>
+window.customElements.define(MorphView.is, MorphView);

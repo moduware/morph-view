@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
 
     <title>morph-view test</title>
-
+    
     <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
     <script src="../node_modules/wct-browser-legacy/browser.js"></script>
-    <script src="../node_modules/@polymer/morph-element/morph-element.js"></script>
 
     <script type="module" src="../morph-view.js"></script>
   </head>
+
   <body>
 
     <test-fixture id="ChangedPropertyTestFixture">
@@ -30,10 +30,6 @@
 
         it('setting a property on the element works', function() {
           expect(element.platform).to.equal('android');
-          
-          // var elementShadowRoot = element.shadowRoot;
-          // var elementHeader = elementShadowRoot.querySelector('h2');
-          // assert.equal(elementHeader.innerHTML, 'Hello new-prop1!');
         });
 
         it('setting a property from android to ios', function () {

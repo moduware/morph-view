@@ -2,6 +2,10 @@
   "description": "View where we put all our elements",
   "name": "@polymer/morph-view",
   "version": "1.0.0",
+  "scripts": {
+    "start": "polymer serve --npm --module-resolution=node",
+    "setup": "yarn install"
+  },
   "resolutions": {
     "inherits": "2.0.3",
     "samsam": "1.1.3",

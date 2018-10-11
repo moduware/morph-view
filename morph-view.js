@@ -1,6 +1,5 @@
-import { MorphElement } from 'morph-element/morph-element.js';
-import { PolymerElement } from '@polymer/polymer/polymer-element.js';
-import { html } from '@polymer/polymer/lib/utils/html-tag.js';
+import { MorphElement } from '@moduware/morph-element/morph-element.js';
+import { PolymerElement, html } from '@polymer/polymer/polymer-element.js';
 /**
  * `morph-view`
  * View where we put all our elements
@@ -9,7 +8,7 @@ import { html } from '@polymer/polymer/lib/utils/html-tag.js';
  * @polymer
  * @demo demo/index.html
  */
-class MorphView extends MorphElement(PolymerElement) {
+export class MorphView extends MorphElement(PolymerElement) {
   static get template() {
     return html`
     <style>

@@ -14,6 +14,12 @@
 
   <body>
 
+    <test-fixture id="NoPropertyTestFixture">
+      <template>
+        <morph-view></morph-view>
+      </template>
+    </test-fixture>
+
     <test-fixture id="ChangedPropertyTestFixture">
       <template>
         <morph-view platform="android"></morph-view>
@@ -35,6 +41,19 @@
         it('setting a property from android to ios', function () {
           element.platform = 'ios'
           expect(element.platform).to.equal('ios');
+        });
+
+        context('Platform assignment', () => {
+          beforeEach(function () {
+            element = fixture('NoPropertyTestFixture');
+          });
+          
+          it('has platform attribute after firtsUpdated', (done) => {
+            flush(function() {
+              expect(element.hasAttribute('platform')).to.be.true;
+              done();
+            });
+          });
         });
 
       });

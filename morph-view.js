@@ -1,15 +1,19 @@
-import { MorphElement } from '@moduware/morph-element/morph-element.js';
-import { PolymerElement, html } from '@polymer/polymer/polymer-element.js';
+// import { MorphElement } from '@moduware/morph-element/morph-element.js';
+// import { PolymerElement, html } from '@polymer/polymer/polymer-element.js';
+
+import { LitElement, html } from '@polymer/lit-element';
+import { getPlatform } from '/src/morph-element.js';
+
 /**
  * `morph-view`
  * View where we put all our elements
  *
  * @customElement
- * @polymer
+ * @extends HTMLElement
  * @demo demo/index.html
  */
-export class MorphView extends MorphElement(PolymerElement) {
-  static get template() {
+export class MorphView extends LitElement {
+  render() {
     return html`
     <style>
 
@@ -66,12 +70,25 @@ export class MorphView extends MorphElement(PolymerElement) {
   static get is() { return 'morph-view'; }
   static get properties() {
     return {
+      platform: { 
+        type: String,
+        reflect: true
+      },
+      
       reveal: {
         type: String, // reveal can take a value of left or right
-        reflectToAttribute: true
+        reflect: true
       }
     };
   }
+
+  firstUpdated() {
+    super.firstUpdated();
+
+    if (!this.hasAttribute('platform')) {
+      this.platform = getPlatform();
+    }
+  } 
 }
 
 window.customElements.define(MorphView.is, MorphView);

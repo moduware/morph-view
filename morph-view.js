@@ -82,10 +82,14 @@ export class MorphView extends LitElement {
     };
   }
 
+  /**
+   * LitElement lifecycle called when element is first updated. 
+   */
   firstUpdated() {
     super.firstUpdated();
-
+    // platform is set if no attribute set in html markup
     if (!this.hasAttribute('platform')) {
+      // getPlatform() is checking what device or platform and return android or ios or windows-phone or unknown
       this.platform = getPlatform();
     }
   } 

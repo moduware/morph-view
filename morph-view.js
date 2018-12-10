@@ -1,8 +1,5 @@
-// import { MorphElement } from '@moduware/morph-element/morph-element.js';
-// import { PolymerElement, html } from '@polymer/polymer/polymer-element.js';
-
 import { LitElement, html } from '@polymer/lit-element';
-import { getPlatform } from '/src/morph-element.js';
+import { getPlatform } from '@moduware/lit-utils';
 
 /**
  * `morph-view`
@@ -17,10 +14,8 @@ export class MorphView extends LitElement {
     return html`
     <style>
 
-
       :host {
         --reveal-width: 260px;
-
 
         display: block;
         position: absolute;
@@ -64,7 +59,7 @@ export class MorphView extends LitElement {
     </style>
 
     <slot></slot>
-`;
+    `;
   }
 
   static get is() { return 'morph-view'; }

@@ -4,6 +4,8 @@
 
 Polymorph View element where we put all of our elements.
 
+Morph Components are now updating from the current polymer base class to lit-element as base class. Components found in the master branch and in the npm registry are using lit-element and the older version with polymer will reside in the `polymer-3.0` branch.
+
 `morph-view` is the containing parent element for components like `morph-sidebar`
 
 ## Getting Started
